@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "description": "My first task",
+    "status": "done",
+    "createdAt": "2026-03-13T19:58:47.940949",
+    "updatedAt": "2026-03-13T20:00:15.004137"
+  },
+  {
+    "id": 2,
+    "description": "My second task",
+    "status": "in-progress",
+    "createdAt": "2026-03-13T19:59:19.418582",
+    "updatedAt": "2026-03-13T20:00:28.517384"
+  },
+  {
+    "id": 3,
+    "description": "My third task",
+    "status": "todo",
+    "createdAt": "2026-03-13T19:59:46.825769",
+    "updatedAt": "2026-03-13T19:59:46.825769"
+  }
+]

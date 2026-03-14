@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Unit Converter</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 500px; margin: 40px auto; padding: 0 20px; }
+        nav a { margin-right: 15px; text-decoration: none; color: #333; font-weight: bold; }
+        nav a.active { color: #0077cc; border-bottom: 2px solid #0077cc; }
+        form { margin-top: 20px; }
+        input, select { padding: 8px; margin: 5px 0; width: 100%; box-sizing: border-box; }
+        button { padding: 10px 20px; background: #0077cc; color: white; border: none; cursor: pointer; margin-top: 10px; }
+        .result { margin-top: 20px; padding: 15px; background: #f0f8ff; border-left: 4px solid #0077cc; }
+        .error { margin-top: 20px; padding: 15px; background: #fff0f0; border-left: 4px solid #cc0000; color: #cc0000; }
+    </style>
+</head>
+<body>
+    <h1>Unit Converter</h1>
+    <nav>
+        <a href="/length">Length</a>
+        <a href="/weight" class="active">Weight</a>
+        <a href="/temperature">Temperature</a>
+    </nav>
+
+    <h2>Weight</h2>
+    <form method="POST" action="/weight">
+        <label>Value:</label>
+        <input type="number" name="value" step="any" required>
+
+        <label>From:</label>
+        <select name="from_unit">
+            {% for unit in units %}
+            <option value="{{ unit }}">{{ unit.capitalize() }}</option>
+            {% endfor %}
+        </select>
+
+        <label>To:</label>
+        <select name="to_unit">
+            {% for unit in units %}
+            <option value="{{ unit }}">{{ unit.capitalize() }}</option>
+            {% endfor %}
+        </select>
+
+        <button type="submit">Convert</button>
+    </form>
+
+    {% if error %}
+    <div class="error">{{ error }}</div>
+    {% endif %}
+
+    {% if result is not none %}
+    <div class="result">Result: <strong>{{ result }}</strong></div>
+    {% endif %}
+</body>
+</html>

@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #f0f4ff;
+    --text: #0a0f1e;
+    --accent: #1a4bcc;
+    --muted: #7a8ab0;
+    --border: #d0d9f0;
+    --white: #ffffff;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.7;
+}
+
+header {
+    background: var(--text);
+    padding: 20px 0;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+header a {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.8rem;
+    color: var(--white);
+    text-decoration: none;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+header a:hover {
+    color: var(--accent);
+}
+
+main {
+    max-width: 740px;
+    margin: 0 auto;
+    padding: 0 24px 80px;
+}
+
+h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border);
+}
+
+h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+.article-card {
+    padding: 24px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.article-card h2 a {
+    color: var(--text);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.article-card h2 a:hover {
+    color: var(--accent);
+}
+
+.article-date {
+    font-size: 0.8rem;
+    color: var(--muted);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: 4px;
+}
+
+.article-content {
+    font-size: 1.1rem;
+    line-height: 1.9;
+    margin: 32px 0;
+}
+
+.back-link {
+    display: inline-block;
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: opacity 0.2s;
+}
+
+.back-link:hover {
+    opacity: 0.6;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="password"],
+textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid var(--border);
+    background: var(--white);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1rem;
+    color: var(--text);
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+input:focus, textarea:focus {
+    border-color: var(--accent);
+}
+
+textarea {
+    min-height: 240px;
+    resize: vertical;
+}
+
+button[type="submit"] {
+    background: var(--accent);
+    color: var(--white);
+    border: none;
+    padding: 12px 32px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+button[type="submit"]:hover {
+    opacity: 0.8;
+}
+
+.admin-card {
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.admin-actions {
+    display: flex;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.admin-actions a {
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 6px 14px;
+    border: 1px solid var(--border);
+    color: var(--text);
+    transition: all 0.2s;
+}
+
+.admin-actions a:hover {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--white);
+}
+
+.admin-actions a.delete:hover {
+    background: #c0392b;
+    border-color: #c0392b;
+}
+
+.add-btn {
+    display: inline-block;
+    margin-bottom: 32px;
+    padding: 10px 24px;
+    background: var(--accent);
+    color: var(--white);
+    text-decoration: none;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: opacity 0.2s;
+}
+
+.add-btn:hover {
+    opacity: 0.8;
+}
+
+.logout-link {
+    display: block;
+    margin-top: 40px;
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.logout-link:hover {
+    color: var(--accent);
+}
+
+.error {
+    color: #c0392b;
+    font-size: 0.9rem;
+    margin-bottom: 16px;
+}
+.header-subtitle {
+    color: var(--muted);
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 6px;
+}
+
+.article-count {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--muted);
+    margin-left: 8px;
+}
+
+.article-preview {
+    margin-top: 10px;
+    font-size: 0.95rem;
+    color: var(--muted);
+    line-height: 1.6;
+}

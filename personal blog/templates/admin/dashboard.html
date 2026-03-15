@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1>Admin Dashboard</h1>
+    <a href="/admin/add" class="add-btn">+ Add Article</a>
+    {% for article in articles %}
+        <div class="admin-card">
+            <div>
+                <h2>{{ article.title }}</h2>
+                <p class="article-date">{{ article.date }}</p>
+            </div>
+            <div class="admin-actions">
+                <a href="/admin/edit/{{ article.id }}">Edit</a>
+                <a href="/admin/delete/{{ article.id }}" class="delete">Delete</a>
+            </div>
+        </div>
+    {% endfor %}
+    <a href="/logout" class="logout-link">Logout</a>
+{% endblock %}

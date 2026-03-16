@@ -13,7 +13,7 @@ This project is part of a larger repository with multiple projects. Clone the wh
 
 ```bash
 git clone https://github.com/eowannx/roadmapsh-python-projects.git
-cd roadmap-projects/unit-converter
+cd unit-converter
 ```
 
 Create and activate a virtual environment:

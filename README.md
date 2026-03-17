@@ -12,3 +12,4 @@ A collection of Python projects from roadmap.sh backend developer path.
 - [Personal Blog](https://roadmap.sh/projects/personal-blog)
 - [Weather API](https://roadmap.sh/projects/weather-api-wrapper-service)
 - [Blogging Platform API](https://roadmap.sh/projects/blogging-platform-api)
+- [Todo List API](https://roadmap.sh/projects/todo-list-api)
